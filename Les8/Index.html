@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title> BURGER </title>
+	<meta name="author" content="HyeJin">
+	<meta name="description" content="...">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Date: 2015-09-29 -->
+	<link rel="stylesheet" href="css/slicknav.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/queries.css">
+
+
+		<script src="https://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/backtotop.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+		<script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+		<script type="text/javascript" src="js/jquery.localScroll.js"></script>
+
+		<script type="text/javascript">
+			jQuery(function( $ ){
+				/**
+				 * Most jQuery.localScroll's settings, actually belong to jQuery.ScrollTo, check it's demo for an example of each option.
+				 * @see http://demos.flesler.com/jquery/scrollTo/
+				 * You can use EVERY single setting of jQuery.ScrollTo, in the settings hash you send to jQuery.localScroll.
+				 */
+
+				// The default axis is 'y', but in this demo, I want to scroll both
+				// You can modify any default like this
+				$.localScroll.defaults.axis = 'xy';
+
+				/**
+				 * NOTE: I use $.localScroll instead of $('#navigation').localScroll() so I
+				 * also affect the >> and << links. I want every link in the page to scroll.
+				 */
+				$.localScroll({
+					target: '#navigation', // could be a selector or a jQuery object too.
+					queue:true,
+					duration:1000,
+					hash:true,
+					onBefore:function( e, anchor, $target ){
+						// The 'this' is the settings object, can be modified
+					},
+					onAfter:function( anchor, settings ){
+						// The 'this' contains the scrolled element (#content)
+					}
+				});
+			});
+		</script>
+</head>
+
+<body>
+
+	<div id="navigation">
+		<div class="wrap">
+			<div id="logo">
+				<img src="img/logo.png" />
+			</div>
+			<ul id="nav">
+				<li><a href="#home">HOME</a></li>
+				<li><a href="#about">ABOUT</a></li>
+				<li><a href="#burgers">BURGERS</a></li>
+				<li><a href="#gallery">GALLERY</a></li>
+				<li><a href="#contact">CONTACT</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="header">
+		<div class="wrap">
+			<h1>BURGER</h1>
+			<p>The best burgers in town</p>
+			<div id="headerborder"> </div>
+		</div>
+	</div>
+
+	<div id="about">
+		<div class="wrap">
+			<h1>ABOUT</h1>
+			<div id="aboutborder"> </div>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec diam ac ante bibendum hendrerit sed ac ligula. Aenean non feugiat mauris, a posuere enim. Proin laoreet scelerisque magna, quis mollis sem commodo vitae. Mauris massa nibh, finibus
+				sed tellus sit amet, hendrerit maximus tellus. Nulla ullamcorper at neque ut facilisis. Phasellus ut sem eget ligula interdum elementum vitae sed mauris.
+				<br/>
+				<br/>
+				<br/>
+				<!-- br/ = break. '/' na br -->
+				Etiam lacus mauris, ultrices sed molestie nec, dapibus ut felis. Etiam sagittis eros vel feugiat sagittis. Donecs eu nulla sit amet dolor cursus faucibus. Mauris dictum augue nec facilisis volutpat. Aenean ex orci, sodales ut luctus at, tempus vitae massa.
+				Nunc commodo, sem quis gravida varius, ipsum mauris dapibus elit, vel viverra risus felis sit amet odio. Quisque leo purus, aliquet et sagittis at, sollicitudin vel eros. Cras consequat magna eu arcu lacinia, et vulputate felis pellentesque. Nam feugiat
+				sed ex vel ultricies.
+			</p>
+		</div>
+	</div>
+	<div id="burgers">
+		<div class="wrap">
+			<h1>BURGERS</h1>
+			<div id="burgerborder"> </div>
+			<div class="burgerrechthoek">
+				<img src="img/burger1.png" />
+				<h3>BURGER SET</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+			</div>
+			<div class="burgerrechthoek">
+				<img src="img/burger4.png" />
+				<h3>NAKED BURGER</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+			</div>
+			<div class="burgerrechthoek">
+				<img src="img/burger3.png" />
+				<h3>CLASSIC BURGER</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+			</div>
+		</div>
+</div>
+<div id="gallery">
+	<div class="wrap">
+	<p><a href="#gallery">CHECK OUT OUR GALLERY</a></p>
+</div>
+</div>
+
+<div id="contact">
+<div class="wrap">
+	<h1>CONTACT</h1>
+	<div id="contactborder"> </div>
+	<div id="map">
+	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2499.0527647949775!2d4.406628815943982!3d51.21810363963458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f6f940c50efb%3A0xc5ff40ad280380f8!2sMeir%2C+2000+Antwerpen!5e0!3m2!1snl!2sbe!4v1448397061313" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+<div id="contactleft">
+		<img src="img/logo.png">
+		<h1>BURGERS</h1>
+		<p>Meir 1 <br/>2000 Antwerpen</p>
+		<p>info@burgers.be<br/>+32 (0)232 25 94<p>
+</div>
+
+<div id="contactright">
+<form>
+	<input type="text" placeholder="Naam + Voornaam"/>
+	<input type="text" placeholder="E-mail"/>
+	<input type="text" placeholder="Tel."/>
+				<!--input: enkele regel, meerdere regels: textarea -->
+	<textarea placeholder="Uw bericht"></textarea> <!--input: NIET SLUITEN textarea: SLUITEN -->
+	<button type="submit">VERSTUUR </button>
+</form>
+</div>
+</div>
+</div>
+
+<div id="footer">
+	<div class=wrap>
+	<p><strong> BURGER </strong> | All rights reserved ® 2015<p>
+	</div>
+</div>
+
+<img id="scrollup" src="img/backtotop.png"/>
+<!-- <a id="scrollup">Scroll</a> -->
+
+<script src="js/jquery.slicknav.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#nav').slicknav();
+});
+</script>
+</body>
+
+</html>
